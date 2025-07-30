@@ -209,25 +209,3 @@ plot_confusion_matrix(cm_resampled_xg, classes=[0, 1], title= "Confusion Matrix 
 print("Evaluation of xgboost Model")
 print()
 metrics(test_Y, predictions_resampled_xg.round())
-
-
-# Now it is evident that after addressing the class imbalance problem, our Random forest classifier with SMOTE performs far better than the Random forest classifier withour SMOTE
-
-
-# import joblib
-# joblib.dump(rf_resampled, 'cc_fraud_model.pkl') 
-
-
-# # Load the saved model
-# model = joblib.load('cc_fraud_model.pkl') 
-
-# # New employee data (must have same features as training data)
-# new_data = pd.DataFrame({
-#     'Age': [35],
-#     'Tenure': [2], 
-#     'Education': [5]
-# })
-
-# # Get prediction (0=stay, 1=leave)
-# prediction = model.predict(new_data)  
-# print("Will leave?", "Yes" if prediction[0] == 1 else "No")
